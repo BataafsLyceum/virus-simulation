@@ -13,10 +13,13 @@ public class World {
     /**
      * @param args the command line arguments
      */
+    
+   static VirusSimulation.Person People[] = new VirusSimulation.Person[10000];
+    
     public static void main(String[] args) {
         // TODO code application logic here
-        //test test
-        // test test bram
-        // test test github
+        for (int number = 0; number < 10000; number++){
+            People[number] = new VirusSimulation.Person(number);
+        }
     }
 }
