@@ -10,4 +10,10 @@ package VirusSimulation;
  */
 public class Virus {
     
+    public VirusSimulation.Person infectSomeone(VirusSimulation.Person[10000] People){
+        int Number = (int) (10000 * Math.random());
+        People[Number].State = 'i';
+        return People;
+    }
+    
 }
