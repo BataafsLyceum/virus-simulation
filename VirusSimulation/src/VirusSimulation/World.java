@@ -21,5 +21,7 @@ public class World {
         for (int number = 0; number < 10000; number++){
             People[number] = new VirusSimulation.Person(number);
         }
+        System.out.print(People[33].Age);
+        System.out.print(People[924].Gender);
     }
 }
