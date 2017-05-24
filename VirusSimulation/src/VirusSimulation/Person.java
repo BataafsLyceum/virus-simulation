@@ -12,6 +12,7 @@ public class Person {
 
     public int Age;
     public char State;
+    public boolean Infected;
     public int Number;
     public char Gender;
 
