@@ -15,38 +15,46 @@ public class World {
      */
     static VirusSimulation.Person People[] = new VirusSimulation.Person[10000];
     static char State[] = new char[10000];
-            Virus Virus1 = new Virus();
 
     public static void main(String[] args) {
         // TODO code application logic here
+        Virus Virus1 = new Virus();
         startVirusSimulation();
         countInfected(0);
         for (int number = 1; number <= 10; number++) {
-            haveANewDay();
+            haveANewDay(Virus1);
             countInfected(number);
-        } 
+        }
     }
 
-    public static void startVirusSimulation(){
-        
+    public static void startVirusSimulation() {
+
         for (int number = 0; number < 10000; number++) {
             People[number] = new VirusSimulation.Person(number);
         }
         int Number2 = (int) (10000 * Math.random());
         VirusSimulation.World.People[Number2].State = 'i';
     }
-    
-    public static void haveANewDay(){
-        for (int number = 0; number < 10000; number++){
+
+    public static void haveANewDay(Virus Virus1) {
+
+        for (int number = 0; number < 10000; number++) {
             People[number].Infected = false;
         }
         for (int number = 0; number < 10000; number++) {
             if (People[number].State == 'i') {
-                VirusSimulation.Virus.infectSomeone(50);
+                Virus1.infectSomeone(50);
             }
         }
-        for (int number = 0; number < 10000; number++){
-            //People[number].State = People[number].Infected;
+        for (int number = 0; number < 10000; number++) {
+            if(People[number].Infected = true);
+            People[number].State = 'i';
+        }
+    
+        for (int number = 0; number < 10000; number++) {
+            if (People[number].State == 'i') {
+                Virus1.becomeResistent(number);
+            }
         }
     }
 
