@@ -32,6 +32,7 @@ public class World {
         for (int number = 0; number < 10000; number++) {
             People[number] = new VirusSimulation.Person(number);
         }
+
         int Number2 = (int) (10000 * Math.random());
         VirusSimulation.World.People[Number2].State = 'i';
     }
@@ -46,11 +47,17 @@ public class World {
                 Virus1.infectSomeone(50);
             }
         }
+        
         for (int number = 0; number < 10000; number++) {
-            if(People[number].Infected = true);
+            if (People[number].Infected == true){
             People[number].State = 'i';
+            }
         }
-    
+        
+        for (int number = 0; number < 10000; number++) {
+            People[number].Infected = false;
+        }
+
         for (int number = 0; number < 10000; number++) {
             if (People[number].State == 'i') {
                 Virus1.becomeResistent(number);

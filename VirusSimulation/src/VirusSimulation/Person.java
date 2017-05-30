@@ -22,5 +22,6 @@ public class Person {
         Gender = ManofWife[(int) (2 * Math.random())];
         State = 's';
         Number = input;
+        Infected = false;
     }
 }
