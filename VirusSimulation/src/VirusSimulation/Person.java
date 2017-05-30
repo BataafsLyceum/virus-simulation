@@ -15,6 +15,7 @@ public class Person {
     public boolean Infected;
     public int Number;
     public char Gender;
+    public int[] Position = new int[2];
 
     public Person(int input) {
         Age = (int) (100 * Math.random());
@@ -23,5 +24,7 @@ public class Person {
         State = 's';
         Number = input;
         Infected = false;
+        Position[0] = (int) (1000 * Math.random());
+        Position[1] = (int) (1000 * Math.random());
     }
 }
