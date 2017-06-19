@@ -17,14 +17,16 @@ public class World {
     static char State[] = new char[10000];
 
     public static void main(String[] args) {
+         for (int number4 = 0; number4 < 1; number4++){
         // TODO code application logic here
         Virus Virus1 = new Virus();
         startVirusSimulation();
-        countInfected(0);
+        countInfected2(0);
         for (int number = 1; number <= 10; number++) {
             haveANewDay(Virus1);
-            countInfected(number);
+            countInfected2(number);
         }
+    }
     }
 
     public static void startVirusSimulation() {
@@ -35,7 +37,16 @@ public class World {
 
         int Number2 = (int) (10000 * Math.random());
         VirusSimulation.World.People[Number2].State = 'i';
+        for (int number = 0; number < 0; number++) {
+        int Number3 = (int) (10000 * Math.random());
+        if(VirusSimulation.World.People[Number3].State != 'i' && VirusSimulation.World.People[Number3].State !='r' ){
+            VirusSimulation.World.People[Number3].State = 'r';}
+        
+        
+        
     }
+    }
+    
 
     public static void haveANewDay(Virus Virus1) {
 
@@ -82,5 +93,25 @@ public class World {
         System.out.println("s  " + Count[0]);
         System.out.println("i  " + Count[1]);
         System.out.println("r  " + Count[2]);
+    }
+
+    public static void countInfected2(int day) {
+        int[] Count = new int[3];
+        for (int number = 0; number < 10000; number++) {
+            if (People[number].State == 's') {
+                Count[0]++;
+            }
+            if (People[number].State == 'i') {
+                Count[1]++;
+            }
+            if (People[number].State == 'r') {
+                Count[2]++;
+            }
+        }
+        System.out.print(day + ",");
+        System.out.print(Count[0] + ","); //s
+        System.out.print(Count[1] + ","); //i
+        System.out.print(Count[2] + ",");   // r
+        System.out.println();
     }
 }
